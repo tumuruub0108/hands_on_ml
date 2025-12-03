@@ -1,0 +1,15 @@
+# Asynchronous and Synchronous
+The terms synchronous and asynchronous describe how tasks, processes, or communications are coordinated in time. Here's a clear breakdown.
+
+# Synchronous (Sync)
+Definition: Tasks or events happen one after another, in a strict sequence. Each task waits for the previous one to finish before starting.
+
+Key idea: Do it now, wait for it to finish.
+
+# Asynchronous (Async)
+Definition: Tasks or events can happen independently, without waiting for other tasks to complete. The program or system can continue doing other work while waiting for a task to finish.
+
+Key idea: Start it, and come back when it's done.
+
+# Pipelines
+A sequence of data processing components is called a data pipeline. Pipelines are very common in Machine Learning systems, since there is a lot of data to manipulate and many data transformations to apply.
