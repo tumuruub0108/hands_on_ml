@@ -1,0 +1,32 @@
+# The Vanishing/Exploding Gradients Problems
+
+
+# Vanishing gradient problem
+During backpropagation, gradients are computed and passed backward through the layers. But sometimes these gradients become very, very small (close to zero). When gradients shrink too much:
+    → Earlier layers (closer to the input) barely receive any learning signal
+    → Their weights do not update
+    → The network stops learning
+This is the vanishing gradient problem.
+
+| Concept   | Explanation                                       |
+| --------- | ------------------------------------------------- |
+| What      | Gradients shrink to near zero during backprop     |
+| Causes    | Sigmoid/tanh activations, deep networks           |
+| Effect    | Early layers stop learning                        |
+| Symptoms  | Slow training, poor convergence                   |
+| Solutions | ReLU, batchnorm, better init, residuals, LSTM/GRU |
+
+
+# Exploding gradients problem
+The exploding gradient problem is the opposite of the vanishing gradient problem. Instead of gradients becoming too small, they become extremely large during backpropagation. During backpropagation, gradients are multiplied layer by layer. Sometimes the gradients blow up to very large values. This causes:
+    Very large weight updates
+    Model becoming unstable
+    Loss jumping to NaN
+    Training diverging instead of converging
+
+| Concept | Explanation                                               |
+| ------- | --------------------------------------------------------- |
+| What    | Gradients become extremely large                          |
+| Cause   | Multiplying Jacobians > 1, large weights, deep RNNs       |
+| Effects | Instability, NaN loss, divergence                         |
+| Fixes   | Gradient clipping, normalization, better init, smaller LR |
