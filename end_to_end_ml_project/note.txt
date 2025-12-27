@@ -13,3 +13,12 @@ Key idea: Start it, and come back when it's done.
 
 # Pipelines
 A sequence of data processing components is called a data pipeline. Pipelines are very common in Machine Learning systems, since there is a lot of data to manipulate and many data transformations to apply.
+
+# Cross-validation (CV)
+Cross-validation (CV) in machine learning is a model evaluation technique used to estimate how well a model will perform on unseen data. Instead of training and testing the model on a single split of the data, cross-validation reuses the data multiple times in different train/test splits to get a more reliable performance estimate.
+    Basic idea
+        Split the dataset into multiple parts
+        Train the model on some parts
+        Test it on the remaining part
+        Repeat the process several times
+        Average the results
